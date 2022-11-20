@@ -9,6 +9,7 @@ set smartindent
 set backspace=indent,eol,start
 set complete-=1
 set encoding=utf-8
+" set mouse = true
 
 
 " Plugins
@@ -29,14 +30,19 @@ Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 " or                                , { 'branch': '0.1.x' }
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
 Plug 'tribela/vim-transparent'
+Plug 'ackyshake/Spacegray.vim'
 
 call plug#end()
 
 " Color Scheme
+colorscheme spacegray
+let g:spacegray_underline_search = 1
+let g:spacegray_use_italics = 1
+let g:spacegray_low_contrast = 1
+
+
 
 " Remaps
 let mapleader = " "
@@ -89,17 +95,19 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" NerdTree Remaps
+" NerdTree Config
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-" COC Remaps
+let NERDTreeShowHidden=1
+
+" COC Config
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-"ejs
+" .ejs Config
 au BufNewFile,BufRead *.ejs set filetype=html
 
-" color
+" Menu Config
 highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
