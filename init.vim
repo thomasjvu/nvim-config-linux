@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/autoload/')
 
 Plug 'junegunn/vim-easy-align'
 Plug 'pangloss/vim-javascript'
+
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
@@ -26,13 +27,14 @@ Plug 'alvan/vim-closetag'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'mattn/vim-gist'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 " or                                , { 'branch': '0.1.x' }
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
 Plug 'tribela/vim-transparent'
 Plug 'ackyshake/Spacegray.vim'
+" Plug 'Exafunction/codeium.vim'
 
 call plug#end()
 
@@ -43,13 +45,14 @@ let g:spacegray_use_italics = 1
 let g:spacegray_low_contrast = 1
 
 
+let g:codeium_enabled = v:false
 
 " Remaps
 let mapleader = " "
-nnoremap <leader>pv :Vex<CR>
-nnoremap <leader>hv :Hex<CR>
-nnoremap <leader>sv :Sex<CR>
-nnoremap <leader>ex :Explore<CR>
+" nnoremap <leader>pv :Vex<CR>
+" nnoremap <leader>hv :Hex<CR>
+" nnoremap <leader>sv :Sex<CR>
+" nnoremap <leader>ex :Explore<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <leader>0 :e ~/.config/nvim/init.vim<CR>
 
@@ -90,10 +93,10 @@ nmap <Leader>pr <Plug>(Prettier)
 
 " Telescope
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" nnoremap <leader>ff <cmd>Telescope find_files<cr>
+" nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+" nnoremap <leader>fb <cmd>Telescope buffers<cr>
+" nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " NerdTree Config
 nnoremap <leader>n :NERDTreeFocus<CR>
