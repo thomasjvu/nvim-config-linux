@@ -17,6 +17,10 @@ return require('packer').startup(function(use)
   use('ackyshake/Spacegray.vim')
   use({'catppuccin/nvim', as = "catppuccin"})
 
+  use('mattn/emmet-vim')
+
+  use('prettier/vim-prettier')
+
   use({'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}})
   use({'nvim-treesitter/playground'})
   use('theprimeagen/harpoon')

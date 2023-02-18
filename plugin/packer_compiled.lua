@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/aos/.local/share/nvim/site/pack/packer/start/codeium.vim",
     url = "https://github.com/Exafunction/codeium.vim"
   },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/home/aos/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/aos/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -213,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/aos/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-prettier"] = {
+    loaded = true,
+    path = "/home/aos/.local/share/nvim/site/pack/packer/start/vim-prettier",
+    url = "https://github.com/prettier/vim-prettier"
   }
 }
 
