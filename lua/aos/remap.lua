@@ -1,6 +1,15 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- Quickjump to Nvim Config
+vim.keymap.set("n", "<leader>0", ":e ~/.config/nvim<CR>")
+
+-- Open Current File in Browser
+vim.keymap.set("n", "<leader><C-o>", ":!%:p<CR>")
+
+-- Open Current File in Directory
+vim.keymap.set("n", "<leader>go", ":!open %:p:h<CR>")
+
 -- (Visual Mode) Rearrange Code Block
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
@@ -39,3 +48,4 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Prettier
 vim.keymap.set("n", "<leader>pr", "<Plug>(Prettier)")
+

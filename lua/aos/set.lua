@@ -31,4 +31,5 @@ vim.g.mapleader = " "
 vim.g.user_emmet_leader_key=","
 
 -- Codeium
+vim.g.codeium_enabled = false
 vim.g.codeium_disable_bindings = 1
