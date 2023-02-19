@@ -27,9 +27,7 @@ vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
 
--- Emmett
-vim.g.user_emmet_leader_key=","
-
 -- Codeium
 vim.g.codeium_enabled = false
 vim.g.codeium_disable_bindings = 1
+

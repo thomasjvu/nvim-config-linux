@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('tpope/vim-commentary')
+
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -64,6 +65,13 @@ return require('packer').startup(function(use)
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
+    }
+
+    use {
+        "startup-nvim/startup.nvim",
+        config = function()
+            require("startup").setup { theme = "aos" }
+        end,
     }
 
     use('Exafunction/codeium.vim')

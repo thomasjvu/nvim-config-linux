@@ -10,10 +10,19 @@ vim.opt.termguicolors = true
 -- default setup
 require("nvim-tree").setup({
     view = {
-        width = 30,
-        hide_root_folder = false,
         side = "left",
+        width = 30,
+        hide_root_folder = true,
     }
 })
 
 vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle<CR>')
+
+-- Always Open Nvim Tree
+-- local function open_nvim_tree()
+
+--     -- always open the tree
+--     require("nvim-tree.api").tree.open()
+-- end
+
+-- open_nvim_tree()
