@@ -42,6 +42,7 @@ local settings = {
             { " File Browser", "Telescope file_browser", "<leader>fb" },
             { " Colorschemes", "Telescope colorscheme", "<leader>cs" },
             { " New File", "lua require'startup'.new_file()", "<leader>nf" },
+            { " Config", ":e ~/.config/nvim<CR>", "<leader>co"},
         },
         highlight = "String",
         default_color = "",

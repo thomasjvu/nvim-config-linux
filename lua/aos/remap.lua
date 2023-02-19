@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Quickjump to Nvim Config
-vim.keymap.set("n", "<leader>0", ":e ~/.config/nvim<CR>")
+vim.keymap.set("n", "<leader>co", ":e ~/.config/nvim<CR>")
 
 -- Open Current File in Browser
 vim.keymap.set("n", "<leader><C-o>", ":!%:p<CR>")
