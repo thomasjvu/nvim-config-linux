@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/aos/.local/share/nvim/site/pack/packer/start/Spacegray.vim",
     url = "https://github.com/ackyshake/Spacegray.vim"
   },
-  catppuccin = {
-    loaded = true,
-    path = "/home/aos/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/aos/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -113,11 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/aos/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["codeium.vim"] = {
-    loaded = true,
-    path = "/home/aos/.local/share/nvim/site/pack/packer/start/codeium.vim",
-    url = "https://github.com/Exafunction/codeium.vim"
   },
   ["emmet-vim"] = {
     loaded = true,
@@ -195,20 +185,10 @@ _G.packer_plugins = {
     path = "/home/aos/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  playground = {
-    loaded = true,
-    path = "/home/aos/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/aos/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["seoul256.nvim"] = {
-    loaded = true,
-    path = "/home/aos/.local/share/nvim/site/pack/packer/start/seoul256.nvim",
-    url = "https://github.com/shaunsingh/seoul256.nvim"
   },
   ["startup.nvim"] = {
     config = { "\27LJ\2\nF\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\ntheme\baos\nsetup\fstartup\frequire\0" },
@@ -225,6 +205,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/aos/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0" },
+    loaded = true,
+    path = "/home/aos/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["tree-sitter-markdown"] = {
     loaded = true,
@@ -258,6 +244,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for startup.nvim]], true)
 try_loadstring("\27LJ\2\nF\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\ntheme\baos\nsetup\fstartup\frequire\0", "config", "startup.nvim")
 time([[Config for startup.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")

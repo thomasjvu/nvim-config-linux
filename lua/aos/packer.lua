@@ -13,16 +13,20 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use('shaunsingh/seoul256.nvim')
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
+
     use('ackyshake/Spacegray.vim')
-    use({'catppuccin/nvim', as = "catppuccin"})
 
     use('mattn/emmet-vim')
 
     use('prettier/vim-prettier')
 
     use({'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}})
-    use({'nvim-treesitter/playground'})
+    -- use({'nvim-treesitter/playground'})
+
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -74,14 +78,14 @@ return require('packer').startup(function(use)
         end,
     }
 
-    use {
-        "nvim-telescope/telescope-file-browser.nvim",
-        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    }
 
-    use('Exafunction/codeium.vim')
+    -- use('Exafunction/codeium.vim')
     use('nvim-lualine/lualine.nvim')
     use('MDeiml/tree-sitter-markdown')
+
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
 
 end)
 
