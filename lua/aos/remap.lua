@@ -49,3 +49,5 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- Prettier
 vim.keymap.set("n", "<leader>pr", "<Plug>(Prettier)")
 
+-- Emmett
+vim.g.user_emmet_leader_key=","
