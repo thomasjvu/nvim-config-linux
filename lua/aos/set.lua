@@ -35,6 +35,10 @@ vim.g.netrw_altv = 1
 vim.g.netrw_winsize = 20
 vim.g.netrw_keepdir = 0
 
+-- Theme (Spacegray)
+vim.g.spacegray_use_italics = 1
+vim.g.spacegray_low_contrast = 1
+
 -- Codeium
 -- vim.g.codeium_enabled = false
 -- vim.g.codeium_disable_bindings = 1
