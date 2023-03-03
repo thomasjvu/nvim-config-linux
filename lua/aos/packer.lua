@@ -19,8 +19,9 @@ return require("packer").startup(function(use)
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     })
 
-    -- use { 'echasnovski/mini.nvim', branch = 'stable' }
-    use({ "echasnovski/mini.animate", branch = "stable" })
+
+    -- Animations
+    -- use({ "echasnovski/mini.animate", branch = "stable" })
 
     -- Zen Mode
     use({
