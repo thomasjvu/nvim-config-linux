@@ -54,3 +54,6 @@ vim.g.user_emmet_leader_key = ","
 
 -- Zen Mode
 vim.keymap.set("n", "<space>z", ":ZenMode<CR>")
+
+-- Terminal
+vim.keymap.set("n", "<leader>te", ":terminal<CR>")

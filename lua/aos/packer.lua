@@ -78,7 +78,10 @@ return require("packer").startup(function(use)
     use("theprimeagen/harpoon")
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
+
+    -- Comments
     use("tpope/vim-commentary")
+    use('JoosepAlviste/nvim-ts-context-commentstring')
 
     -- use {
     --     'nvim-tree/nvim-tree.lua',
@@ -121,6 +124,7 @@ return require("packer").startup(function(use)
         end,
     })
 
+    -- Styling
     use({
         "startup-nvim/startup.nvim",
         config = function()
@@ -128,9 +132,10 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- use('Exafunction/codeium.vim')
     use("nvim-lualine/lualine.nvim")
-    use("MDeiml/tree-sitter-markdown")
+
+    -- Extras
+    -- use('Exafunction/codeium.vim')
 
     use({
         "akinsho/toggleterm.nvim",
@@ -139,4 +144,5 @@ return require("packer").startup(function(use)
             require("toggleterm").setup()
         end,
     })
+
 end)
