@@ -1,5 +1,5 @@
 function ColorMyNeovim(color)
-    color = color or "spacegray"
+    color = color or "github_dark"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })

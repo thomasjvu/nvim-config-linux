@@ -47,9 +47,22 @@ return require("packer").startup(function(use)
     })
 
     -- Themes
-    use("alek3y/spacegray.vim")
-    use("folke/tokyonight.nvim")
-    use("tiagovla/tokyodark.nvim")
+    use({
+        'projekt0n/github-nvim-theme',
+        tag = 'v0.0.7',
+        -- or                            branch = '0.0.x'
+        config = function()
+            require('github-theme').setup({
+                theme_style = "dark",
+                function_style = "italic",
+                colors = { hint = "orange", error = "#ff2147" },
+                transparent = true,
+                dark_sidebar = true,
+                dark_float = true,
+                comment_style = "italic",
+            })
+        end
+    })
 
     use("mattn/emmet-vim")
 
@@ -80,20 +93,20 @@ return require("packer").startup(function(use)
         branch = "v1.x",
         requires = {
             -- LSP Support
-            { "neovim/nvim-lspconfig" },    -- Required
-            { "williamboman/mason.nvim" },  -- Optional
+            { "neovim/nvim-lspconfig" },             -- Required
+            { "williamboman/mason.nvim" },           -- Optional
             { "williamboman/mason-lspconfig.nvim" }, -- Optional
 
             -- Autocompletion
-            { "hrsh7th/nvim-cmp" }, -- Required
-            { "hrsh7th/cmp-nvim-lsp" }, -- Required
-            { "hrsh7th/cmp-buffer" }, -- Optional
-            { "hrsh7th/cmp-path" }, -- Optional
+            { "hrsh7th/nvim-cmp" },         -- Required
+            { "hrsh7th/cmp-nvim-lsp" },     -- Required
+            { "hrsh7th/cmp-buffer" },       -- Optional
+            { "hrsh7th/cmp-path" },         -- Optional
             { "saadparwaiz1/cmp_luasnip" }, -- Optional
-            { "hrsh7th/cmp-nvim-lua" }, -- Optional
+            { "hrsh7th/cmp-nvim-lua" },     -- Optional
 
             -- Snippets
-            { "L3MON4D3/LuaSnip" },    -- Required
+            { "L3MON4D3/LuaSnip" },             -- Required
             { "rafamadriz/friendly-snippets" }, -- Optional
         },
     })
