@@ -7,6 +7,7 @@ return require("packer").startup(function(use)
     -- Packer can manage itself
     use("wbthomason/packer.nvim")
 
+    -- File Browsing
     use({
         "nvim-telescope/telescope.nvim",
         tag = "0.1.1",
@@ -19,9 +20,7 @@ return require("packer").startup(function(use)
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     })
 
-
-    -- Animations
-    -- use({ "echasnovski/mini.animate", branch = "stable" })
+    use("theprimeagen/harpoon")
 
     -- Zen Mode
     use({
@@ -55,7 +54,7 @@ return require("packer").startup(function(use)
             require('github-theme').setup({
                 theme_style = "dark",
                 function_style = "italic",
-                colors = { hint = "orange", error = "#ff2147" },
+                colors = { error = "#ff2147" },
                 transparent = true,
                 dark_sidebar = true,
                 dark_float = true,
@@ -64,33 +63,22 @@ return require("packer").startup(function(use)
         end
     })
 
-    use("mattn/emmet-vim")
+    -- Style
+    use({
+        "startup-nvim/startup.nvim",
+        config = function()
+            require("startup").setup({ theme = "aos" })
+        end,
+    })
+
+    use("nvim-lualine/lualine.nvim")
+
 
     -- Formatting
 
-    use('neovim/nvim-lspconfig')
-    use('jose-elias-alvarez/null-ls.nvim')
-    use('MunifTanjim/prettier.nvim')
-
     use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
     -- use({'nvim-treesitter/playground'})
-
-    use("theprimeagen/harpoon")
-    use("mbbill/undotree")
-    use("tpope/vim-fugitive")
-
-    -- Comments
-    use("tpope/vim-commentary")
-    use('JoosepAlviste/nvim-ts-context-commentstring')
-
-    -- use {
-    --     'nvim-tree/nvim-tree.lua',
-    --     requires = {
-    --         'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    --     },
-    --     tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    -- }
-
+    --
     use({
         "VonHeikemen/lsp-zero.nvim",
         branch = "v1.x",
@@ -114,9 +102,14 @@ return require("packer").startup(function(use)
         },
     })
 
+    use('neovim/nvim-lspconfig')
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
+
     use({
         "windwp/nvim-ts-autotag",
     })
+
     use({
         "windwp/nvim-autopairs",
         config = function()
@@ -124,19 +117,17 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- Styling
-    use({
-        "startup-nvim/startup.nvim",
-        config = function()
-            require("startup").setup({ theme = "aos" })
-        end,
-    })
+    use("mattn/emmet-vim")
 
-    use("nvim-lualine/lualine.nvim")
+    -- Comments
+    use("tpope/vim-commentary")
+    use('JoosepAlviste/nvim-ts-context-commentstring')
 
-    -- Extras
-    -- use('Exafunction/codeium.vim')
+    -- Version Control 
+    use("tpope/vim-fugitive")
+    use("mbbill/undotree")
 
+    -- Terminal
     use({
         "akinsho/toggleterm.nvim",
         tag = "*",
@@ -144,5 +135,8 @@ return require("packer").startup(function(use)
             require("toggleterm").setup()
         end,
     })
+
+    -- Extras
+    -- use('Exafunction/codeium.vim')
 
 end)

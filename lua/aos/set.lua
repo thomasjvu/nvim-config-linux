@@ -8,11 +8,11 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+-- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
@@ -32,12 +32,12 @@ vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3
 vim.g.netrw_browse_split = 0
 vim.g.netrw_altv = 1
-vim.g.netrw_winsize = 20
+vim.g.netrw_winsize = 50
 vim.g.netrw_keepdir = 0
 
 -- Theme (Spacegray)
-vim.g.spacegray_use_italics = 1
-vim.g.spacegray_low_contrast = 1
+-- vim.g.spacegray_use_italics = 1
+-- vim.g.spacegray_low_contrast = 1
 
 -- Codeium
 -- vim.g.codeium_enabled = false
