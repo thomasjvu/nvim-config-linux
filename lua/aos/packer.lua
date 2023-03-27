@@ -119,6 +119,12 @@ return require("packer").startup(function(use)
 
     use("mattn/emmet-vim")
 
+    -- Markdown
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
     -- Comments
     use("tpope/vim-commentary")
     use('JoosepAlviste/nvim-ts-context-commentstring')
